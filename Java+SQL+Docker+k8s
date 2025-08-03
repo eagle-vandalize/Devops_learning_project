@@ -8,7 +8,7 @@ Reference repository: [techiescamp/kubernetes-projects](https://github.com/techi
 
  ✅ Step 1: Create EC2 Instance and Configure Security
 
-* Launch an EC2 instance (Ubuntu 20.04 or 22.04 recommended)  of minimum t2.medium size
+* Launch an EC2 instance (Ubuntu 20.04 or 22.04 recommended)  of minimum t2.medium size + 16gb min
 * Create and attach a **Security Group** allowing the following inbound rules:
 
   * **HTTP (80)**
@@ -28,7 +28,7 @@ sudo apt install docker.io -y
 
 #### 📦 Install kubectl
 
-curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 sudo usermod -aG docker $USER
@@ -105,7 +105,7 @@ mvn clean package -DskipTests
 
 Follow the deployment instructions provided in:
 👉 [https://github.com/techiescamp/kubernetes-projects](https://github.com/techiescamp/kubernetes-projects)
-
+https://devopscube.com/deploy-java-app-kubernetes/#step-3-create-configmap-for-mysql
 it contains these steps:
 
 Step 1: Build the Java Application
